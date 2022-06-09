@@ -1,7 +1,11 @@
 import React from 'react'
 
-export default function Question() {
+const Question = ({ question }) => {
   return (
-    <div>Question</div>
+    <div>
+      {question.common_name}
+    </div>
   )
-}
+};
+
+export default Question;
