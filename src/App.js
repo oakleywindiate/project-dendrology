@@ -1,23 +1,36 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
+import QuestionContainer from './QuestionContainer';
 import './App.css';
 
 function App() {
+  const [questions, setQuestions] = useState([])
+  const [error, setError] = useState('')
+
+  const getQuestions = async () => {
+    const url = 'http://localhost:3001'
+    setError('')
+
+    try {
+      const response = await fetch(url)
+      const loadQuestions = await response.json()
+      setQuestions(loadQuestions)
+    } catch(error) {
+      setError(error.message)
+    }
+  }
+
+  useEffect(() => {
+    getQuestions()
+  }, [])
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>project+dendrology</h1>
       </header>
+      <main>
+        <QuestionContainer questions={questions} />
+      </main>
     </div>
   );
 }
