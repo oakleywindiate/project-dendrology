@@ -17,8 +17,8 @@ function App() {
       const response = await fetch(url)
       const loadQuestions = await response.json()
       setQuestions(loadQuestions)
-      setRandomQuestions(loadQuestions.sort(() => Math.random() -.5))
-    } catch(error) {
+      setRandomQuestions(loadQuestions.sort(() => Math.random() - .5))
+    } catch (error) {
       setError(error.message)
     }
   }
@@ -26,7 +26,12 @@ function App() {
   useEffect(() => {
     getQuestions()
   }, [])
-  
+
+  const checkAnswer = (submitValue) => {
+    if (submitValue === questions[position].scientific_name) {
+      setPosition(position + 1)
+    }
+  }
 
   return (
     <div className="App">
@@ -35,7 +40,7 @@ function App() {
       </header>
       <main>
         <QuestionContainer questions={randomizeQuesitons} position={position} />
-        <Form />
+        <Form submitValue={checkAnswer} />
       </main>
     </div>
   );
