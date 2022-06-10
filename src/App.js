@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import QuestionContainer from './QuestionContainer';
+import QuestionContainer from './Components/QuestionContainer';
+import Form from './Components/Form';
 import './App.css';
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
       </header>
       <main>
         <QuestionContainer questions={randomizeQuesitons} position={position} />
+        <Form />
       </main>
     </div>
   );
