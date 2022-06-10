@@ -2,9 +2,14 @@ import React from 'react'
 
 const Question = ({ question }) => {
   return (
-    <div>
-      {question.common_name}
-    </div>
+    <section>
+      <div>
+        {question.common_name}
+      </div>
+      <div>
+        {question.scientific_name}
+      </div>
+    </section>
   )
 };
 
