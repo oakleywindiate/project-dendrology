@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 
-const Form = () => {
+const Form = ({ submitValue }) => {
     const [value, setValue] = useState('')
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(value)
+        submitValue(value)
+        setValue('')
     }
     return (
         <form onSubmit={handleSubmit}>
