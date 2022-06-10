@@ -6,18 +6,26 @@ const CorrectAnswer = () => {
         "Nice job!",
         "Wow",
         "Impressive",
-        "Wow! Nice job.",
+        "Wow!",
         "Impressive!",
         "Keep up the good work!",
-        "My god, you're a monster",
-        "You are too good at this",
+        "My god, you're a dendrology monster.",
+        "You are too good at this.",
+        "Amazing!",
+        "Great job!",
+        "Nice job!",
         "Technology will replace you soon, but good work for now",
       ];
       
       var randomHappyItem = happyPath[Math.floor(Math.random()*happyPath.length)];
 
   return (
-    <div>{randomHappyItem}</div>
+    <div>
+    <h2>Correct</h2>
+    <div>
+        {randomHappyItem}    
+    </div>
+</div>
   )
 }
 
