@@ -1,16 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import QuestionContainer from './Components/QuestionContainer';
 import Form from './Components/Form';
+import CorrectAnswer from './Components/CorrectAnswer';
+import IncorrectAnswer from './Components/IncorrectAnswer';
 import './App.css';
+import ReviewQuestionsContainer from './Components/ReviewQuestionsContainer';
 
 function App() {
   const [questions, setQuestions] = useState([])
   const [position, setPosition] = useState(0)
   const [randomizeQuesitons, setRandomQuestions] = useState([])
+  const [disableButton, setButton] = useState(false)
+  const [correctAnswer, setCorrectAnswer] = useState(false)
+  const [incorrectAnswer, setIncorrectAnswer] = useState(false)
+  const [incrementCorrectAnswer, setIncrementCorrectAnswer] = useState(0)
+  const [decrementAnswer, setDecrementAnswer] = useState(0)
+  const [reviewQuestions, setReviewQuestions] = useState([])
+  const [disableSubmitButton, setDisableSubmitButton] = useState(false)
   const [error, setError] = useState('')
 
   const getQuestions = async () => {
-    const url = 'http://localhost:3001'
+    const url = 'http://localhost:3001/test'
     setError('')
 
     try {
@@ -29,8 +39,22 @@ function App() {
 
   const checkAnswer = (submitValue) => {
     if (submitValue === questions[position].scientific_name) {
-      setPosition(position + 1)
+      setButton(true)
+      setCorrectAnswer(true)
+      setIncrementCorrectAnswer(incrementCorrectAnswer + 1)
+    } else {
+      setButton(true)
+      setIncorrectAnswer(true)
+      setDecrementAnswer(decrementAnswer + 1)
+      setReviewQuestions((reviewQuestions) => ([ ...reviewQuestions, randomizeQuesitons[position]]))
     }
+  }
+
+  const nextQuestion = () => {
+    setPosition(position + 1)
+    setButton(false)
+    setCorrectAnswer(false)
+    setIncorrectAnswer(false)
   }
 
   return (
@@ -41,6 +65,12 @@ function App() {
       <main>
         <QuestionContainer questions={randomizeQuesitons} position={position} />
         <Form submitValue={checkAnswer} />
+        <button disabled={disableButton ? false : true} onClick={nextQuestion}>Next</button>
+        {correctAnswer ? <CorrectAnswer /> : ''}
+        {incorrectAnswer ? <IncorrectAnswer /> : ''}
+        {incrementCorrectAnswer}
+        {decrementAnswer}
+        {/* < ReviewQuestionsContainer reviewQuestions={reviewQuestions} position={position}/> */}
       </main>
     </div>
   );
