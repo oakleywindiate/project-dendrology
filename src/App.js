@@ -4,7 +4,7 @@ import Form from './Components/Form';
 import CorrectAnswer from './Components/CorrectAnswer';
 import IncorrectAnswer from './Components/IncorrectAnswer';
 import './App.css';
-import ReviewQuestions from './Components/ReviewQuestions';
+import ReviewQuestionsContainer from './Components/ReviewQuestionsContainer';
 
 function App() {
   const [questions, setQuestions] = useState([])
@@ -46,6 +46,7 @@ function App() {
       setButton(true)
       setIncorrectAnswer(true)
       setDecrementAnswer(decrementAnswer + 1)
+      setReviewQuestions((reviewQuestions) => ([ ...reviewQuestions, randomizeQuesitons[position]]))
     }
   }
 
@@ -69,7 +70,7 @@ function App() {
         {incorrectAnswer ? <IncorrectAnswer /> : ''}
         {incrementCorrectAnswer}
         {decrementAnswer}
-        < ReviewQuestions reviewQuestions={reviewQuestions} position={position}/>
+        {/* < ReviewQuestionsContainer reviewQuestions={reviewQuestions} position={position}/> */}
       </main>
     </div>
   );
