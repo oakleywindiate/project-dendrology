@@ -3,6 +3,10 @@ import QuestionContainer from './Components/QuestionContainer';
 import Form from './Components/Form';
 import CorrectAnswer from './Components/CorrectAnswer';
 import IncorrectAnswer from './Components/IncorrectAnswer';
+import { Route } from 'react-router-dom';
+import Points from './Components/Points'; 
+import WelcomePage from './Components/WelcomePage';
+import NavBar from './Components/NavBar';
 import './App.css';
 import ReviewQuestionsContainer from './Components/ReviewQuestionsContainer';
 
@@ -61,16 +65,47 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>project+dendrology</h1>
+        <NavBar />
       </header>
       <main>
-        <QuestionContainer questions={randomizeQuesitons} position={position} />
-        <Form submitValue={checkAnswer} />
-        <button disabled={disableButton ? false : true} onClick={nextQuestion}>Next</button>
-        {correctAnswer ? <CorrectAnswer /> : ''}
-        {incorrectAnswer ? <IncorrectAnswer /> : ''}
-        {incrementCorrectAnswer}
-        {decrementAnswer}
-        {/* < ReviewQuestionsContainer reviewQuestions={reviewQuestions} position={position}/> */}
+      <Route exact path='/' render={() => 
+          <WelcomePage 
+            questions={randomizeQuesitons} 
+            position={position} 
+          />
+        } />
+        <Route exact path='/test' render={() => 
+          <QuestionContainer 
+            questions={randomizeQuesitons} 
+            position={position} 
+          />
+        } />
+        <Route exact path='/test' render={() => 
+          <Form 
+            submitValue={checkAnswer} 
+          />
+        } /> 
+        <Route exact path='/test' render={() => 
+          <button disabled={disableButton ? false : true} onClick={nextQuestion}>Next</button>
+        } />  
+          {correctAnswer ? <Route exact path='/test' render={() => 
+          <CorrectAnswer /> }
+          /> : ''}  
+        {incorrectAnswer ? <Route exact path='/test' render={() => 
+          <IncorrectAnswer /> } 
+          /> : ''}
+        <Route exact path='/test' render={() => 
+          <Points 
+            incrementCorrectAnswer={incrementCorrectAnswer} 
+            decrementAnswer={decrementAnswer}
+          />
+        } />  
+        <Route exact path='/review' render={() => 
+          <ReviewQuestionsContainer 
+            reviewQuestions={reviewQuestions} 
+            position={position}
+          />
+        } />  
       </main>
     </div>
   );
