@@ -1,13 +1,11 @@
 import React from 'react';
 import Question from './Question';
 
-const QuestionContainer = ({ questions }) => {
+const QuestionContainer = ({ questions, position }) => {
   return (
-    <div className="card-section">
-        {questions.map(question => {
-          return <Question question={question} key={question.id}/>
-        })}
-    </div>
+    <section className="card-section">
+        <Question question={questions[position]} key={questions[position].id}/>
+    </section>
   )
 }
 
