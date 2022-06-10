@@ -1,18 +1,16 @@
 import React from 'react';
 
-const ReviewQuestions = () => {
-
-fetch('http://localhost:3001/incorrect', {
-    method: 'POST',
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify()
-}).then(() => {
-    console.log("Incorrect question added")
-})
-
+const ReviewQuestions = ({ reviewQuestions }) => {
 
   return (
-    <div>ReviewQuestions</div>
+    <section>
+      <div>
+        {reviewQuestions.common_name}
+      </div>
+      <div>
+        {reviewQuestions.scientific_name}
+      </div>
+    </section>
   )
 }
 
