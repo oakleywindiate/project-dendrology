@@ -3,10 +3,12 @@ import Question from './Question';
 
 const QuestionContainer = ({ questions, position }) => {
 
-  let error = 
+const error = 
   <div>
     "An error has occurred"
   </div>
+
+  
 
   return (
     <section className="card-section">
