@@ -1,15 +1,15 @@
 import React from 'react';
 import ReviewQuestions from './ReviewQuestions';
 
-const ReviewQuestionsContainer = ({ reviewQuestions, position }) => {
+const ReviewQuestionsContainer = ({ reviewQuestions }) => {
 
-const populateQuestions = reviewQuestions.map((question, index) => {
+const populateQuestions = reviewQuestions.map((question) => {
     return (
         <section className="review-section">
           <ReviewQuestions 
             common_name={question.common_name} 
             scientific_name={question.scientific_name}
-            key={index} 
+            key={question.id} 
           />
         </section>
      )
