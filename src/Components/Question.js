@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import './/Question.css'
 
 const Question = ({ question }) => {
   return (
-    <section>
+    <section className="question-section">
       <div>
         {question.common_name}
       </div>
