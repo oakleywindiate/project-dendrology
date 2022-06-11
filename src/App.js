@@ -3,10 +3,11 @@ import QuestionContainer from './Components/QuestionContainer';
 import Form from './Components/Form';
 import CorrectAnswer from './Components/CorrectAnswer';
 import IncorrectAnswer from './Components/IncorrectAnswer';
-import { Route } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import Points from './Components/Points'; 
 import WelcomePage from './Components/WelcomePage';
 import NavBar from './Components/NavBar';
+import About from './Components/About';
 import './App.css';
 import ReviewQuestionsContainer from './Components/ReviewQuestionsContainer';
 
@@ -20,7 +21,6 @@ function App() {
   const [incrementCorrectAnswer, setIncrementCorrectAnswer] = useState(0)
   const [decrementAnswer, setDecrementAnswer] = useState(0)
   const [reviewQuestions, setReviewQuestions] = useState([])
-  const [disableSubmitButton, setDisableSubmitButton] = useState(false)
   const [error, setError] = useState('')
 
   const getQuestions = async () => {
@@ -64,46 +64,47 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>project+dendrology</h1>
+        <h1>PROJECT+DENDROLOGY</h1>
         <NavBar />
+        <Link to="/test"> 
+          <button className="enter-app-link">ENTER APP</button>
+        </Link>
       </header>
       <main>
-      <Route exact path='/' render={() => 
+        <Route exact path='/home' render={() => 
           <WelcomePage 
             questions={randomizeQuesitons} 
             position={position} 
           />
-        } />
+          } />
         <Route exact path='/test' render={() => 
-          <QuestionContainer 
-            questions={randomizeQuesitons} 
-            position={position} 
-          />
-        } />
-        <Route exact path='/test' render={() => 
-          <Form 
-            submitValue={checkAnswer} 
-          />
-        } /> 
-        <Route exact path='/test' render={() => 
-          <button disabled={disableButton ? false : true} onClick={nextQuestion}>Next</button>
-        } />  
-          {correctAnswer ? <Route exact path='/test' render={() => 
-          <CorrectAnswer /> }
-          /> : ''}  
-        {incorrectAnswer ? <Route exact path='/test' render={() => 
-          <IncorrectAnswer /> } 
-          /> : ''}
-        <Route exact path='/test' render={() => 
-          <Points 
-            incrementCorrectAnswer={incrementCorrectAnswer} 
-            decrementAnswer={decrementAnswer}
-          />
-        } />  
-        <Route exact path='/review' render={() => 
+          <section>
+            <QuestionContainer 
+              questions={randomizeQuesitons}               
+              position={position} 
+            />
+            <Form 
+              submitValue={checkAnswer} 
+            />
+            <button disabled={disableButton ? false : true} onClick={nextQuestion}>Next</button>
+            {correctAnswer ? <Route exact path='/test' render={() =>               
+              <CorrectAnswer /> } /> : ''}  
+            {incorrectAnswer ? <Route exact path='/test' render={() => 
+              <IncorrectAnswer /> } /> : ''}
+            <Points 
+              incrementCorrectAnswer={incrementCorrectAnswer} 
+              decrementAnswer={decrementAnswer}
+            />
+          </section>   
+          } /> 
+        <Route exact path='/review' render={() =>           
           <ReviewQuestionsContainer 
             reviewQuestions={reviewQuestions} 
             position={position}
+          />
+        } />  
+        <Route exact path='/about' render={() =>           
+          <About 
           />
         } />  
       </main>

@@ -1,0 +1,21 @@
+.welcome-section {
+   display: flex;
+}
+
+.welcome-page-h2,
+.welcome-astronaut {
+   color: #00E69B; 
+}
+
+.welcome-page-h3 {
+   color: white;
+}
+
+.welcome-page-text,
+.welcome-page-user {
+   width: 50%;
+}
+
+.welcome-astronaut {
+   flex: 1;
+}
