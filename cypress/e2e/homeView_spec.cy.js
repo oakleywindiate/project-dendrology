@@ -21,7 +21,7 @@ describe('Home page', () => {
     cy.contains('REVIEW').click().url().should('eq', 'http://localhost:3000/review')
   })
 
-  it('Should display a link to the about page while viewing the home page', () => {
+  it('Should display a link to the "About" page while viewing the home page', () => {
     cy.contains('ABOUT').click().url().should('eq', 'http://localhost:3000/about')
   })
 
