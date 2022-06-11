@@ -14,7 +14,7 @@ const NavBar = () => {
       <NavLink to='/review'>
         <p className="incorrect-link">REVIEW</p>
       </NavLink>
-      <NavLink to='/review'>
+      <NavLink to='/test'>
         <button className="enter-app-link">ENTER APP</button>
       </NavLink>
     </nav>

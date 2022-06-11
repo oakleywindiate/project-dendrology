@@ -68,39 +68,33 @@ function App() {
         <NavBar />
       </header>
       <main>
-      <Route exact path='/' render={() => 
+        <Route exact path='/home' render={() => 
           <WelcomePage 
             questions={randomizeQuesitons} 
             position={position} 
           />
-        } />
+          } />
         <Route exact path='/test' render={() => 
-          <QuestionContainer 
-            questions={randomizeQuesitons} 
-            position={position} 
-          />
-        } />
-        <Route exact path='/test' render={() => 
-          <Form 
-            submitValue={checkAnswer} 
-          />
-        } /> 
-        <Route exact path='/test' render={() => 
-          <button disabled={disableButton ? false : true} onClick={nextQuestion}>Next</button>
-        } />  
-          {correctAnswer ? <Route exact path='/test' render={() => 
-          <CorrectAnswer /> }
-          /> : ''}  
-        {incorrectAnswer ? <Route exact path='/test' render={() => 
-          <IncorrectAnswer /> } 
-          /> : ''}
-        <Route exact path='/test' render={() => 
-          <Points 
-            incrementCorrectAnswer={incrementCorrectAnswer} 
-            decrementAnswer={decrementAnswer}
-          />
-        } />  
-        <Route exact path='/review' render={() => 
+          <section>
+            <QuestionContainer 
+              questions={randomizeQuesitons}               
+              position={position} 
+            />
+            <Form 
+              submitValue={checkAnswer} 
+            />
+            <button disabled={disableButton ? false : true} onClick={nextQuestion}>Next</button>
+            {correctAnswer ? <Route exact path='/test' render={() =>               
+              <CorrectAnswer /> } /> : ''}  
+            {incorrectAnswer ? <Route exact path='/test' render={() => 
+              <IncorrectAnswer /> } /> : ''}
+            <Points 
+              incrementCorrectAnswer={incrementCorrectAnswer} 
+              decrementAnswer={decrementAnswer}
+            />
+          </section>   
+          } /> 
+        <Route exact path='/review' render={() =>           
           <ReviewQuestionsContainer 
             reviewQuestions={reviewQuestions} 
             position={position}

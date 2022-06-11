@@ -3,21 +3,21 @@ import ReviewQuestions from './ReviewQuestions';
 
 const ReviewQuestionsContainer = ({ reviewQuestions, position }) => {
 
-const populateQuestions = reviewQuestions.map((question) => {
+const populateQuestions = reviewQuestions.map((question, index) => {
     return (
         <section className="review-section">
           <ReviewQuestions 
             common_name={question.common_name} 
             scientific_name={question.scientific_name}
-            key={question.id} 
+            key={index} 
           />
         </section>
      )
 })
 
 const error = 
-  <div>
-    "An error has occurred"
+  <div key={"error"}>
+    It's kinda empty in here...
   </div>
 
   
