@@ -1,14 +1,15 @@
 import React from 'react';
 
-const ReviewQuestions = ({ reviewQuestions }) => {
+const ReviewQuestions = ({ common_name, scientific_name }) => {
+    console.log(common_name)
 
   return (
     <section>
       <div>
-        {reviewQuestions.common_name}
+          {common_name}
       </div>
       <div>
-        {reviewQuestions.scientific_name}
+        {scientific_name}
       </div>
     </section>
   )
