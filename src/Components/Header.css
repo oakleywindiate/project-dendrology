@@ -1,0 +1,15 @@
+.icon-section {
+    display: flex;
+    align-items: center;
+}
+
+.App-title {
+    font-family: 'Krona One', sans-serif;
+    font-size: .8em;
+}
+
+.header-icon {
+    font-size: 2em;
+    margin-right: .3em;
+    margin-left: .5em;
+}
