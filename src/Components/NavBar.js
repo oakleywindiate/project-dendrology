@@ -6,16 +6,16 @@ const NavBar = () => {
   return (
     <nav className="nav-link">
       <NavLink to='/home'>
-        <p className="home-link">HOME</p>
+        <p className="home-link link">HOME</p>
       </NavLink>
       <NavLink to='/test'>
-        <p className="test-link">TEST</p>
+        <p className="test-link link">TEST</p>
       </NavLink>
       <NavLink to='/review'>
-        <p className="incorrect-link">REVIEW</p>
+        <p className="incorrect-link link">REVIEW</p>
       </NavLink>
       <NavLink to='/about'>
-        <p className="about-link">ABOUT</p>
+        <p className="about-link link">ABOUT</p>
       </NavLink>
     </nav>  
     )
