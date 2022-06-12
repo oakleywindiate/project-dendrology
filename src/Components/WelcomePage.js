@@ -10,7 +10,7 @@ const WelcomePage = () => {
       <section className="welcome-section">
         <div className="welcome-page-text">
           <h2 className="welcome-page-h2">The New Way to Study</h2>
-          <h3 className="welcome-page-h3">Intuitive and efficient productivity platform</h3>
+          <h3 className="welcome-page-h3">Intuitive and efficient studying platform</h3>
           <div className="welcome-page-buttons">
             <Link to="/test">
               <button className="enter-app-welcome-page">ENTER APP</button>
@@ -26,13 +26,16 @@ const WelcomePage = () => {
       </section>
       <section className="display-section">
         <div className="display one">
-          <h4>THING</h4>
+          <h4>TRAIN</h4>
+          <h5>Work your mind daily</h5>
         </div>
         <div className="display two">
-          <h4>THING</h4>
+          <h4>LEARN</h4>
+          <h5>Review your weak spots</h5>
         </div>
         <div className="display three">
-          <h4>THING</h4>
+          <h4>GAIN</h4>
+          <h5>Feel confident in your knowledge</h5>
         </div>
       </section>
     </section>  

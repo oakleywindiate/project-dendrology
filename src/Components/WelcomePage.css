@@ -13,6 +13,14 @@
    color: #00E69B; 
 }
 
+.welcome-page-h2 {
+   font-family: 'DM Sans', sans-serif;
+}
+
+.welcome-page-h3 {
+   font-family: 'Chakra Petch', sans-serif;
+}
+
 .welcome-page-h3,
 .display-section {
    color: white;
