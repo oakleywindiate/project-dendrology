@@ -8,8 +8,9 @@ import Points from './Components/Points';
 import WelcomePage from './Components/WelcomePage';
 import NavBar from './Components/NavBar';
 import About from './Components/About';
-import './App.css';
+import Header from './Components/Header';
 import ReviewQuestionsContainer from './Components/ReviewQuestionsContainer';
+import './App.css';
 
 function App() {
   const [questions, setQuestions] = useState([])
@@ -64,7 +65,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>PROJECT+DENDROLOGY</h1>
+        <Header />
         <NavBar />
         <Link to="/test"> 
           <button className="enter-app-link">ENTER APP</button>

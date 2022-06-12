@@ -10,6 +10,9 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'DM Sans', sans-serif;
+  font-family: 'Krona One', sans-serif;  
 }
 
 html {
@@ -17,4 +20,11 @@ html {
   margin: 0;
   line-height: inherit;
   box-sizing: border-box;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+button {
+  font-family: 'Chakra Petch', sans-serif;
 }
