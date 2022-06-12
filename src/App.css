@@ -13,8 +13,10 @@
   margin-top: .5em;
 }
 
-.enter-app-link { 
+.enter-app-link,
+.next-button { 
   border: none;
+  color: #000;
   width: 8.5em;
   margin: 1em;
   padding: .8em;

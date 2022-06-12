@@ -16,7 +16,7 @@ const populateQuestions = reviewQuestions.map((question) => {
 })
 
 const error = 
-  <div key={"error"}>
+  <div className="review-section-error" key={"error"}>
     It's kinda empty in here...
   </div>
 

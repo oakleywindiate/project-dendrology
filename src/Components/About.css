@@ -1,0 +1,26 @@
+.about-section {
+    margin-top: 3em;
+    margin-left: 6em;
+    margin-right: 6em;
+}
+
+.about-page-user {
+    display: flex;
+    margin-bottom: 2em;
+}
+
+.welcome-astronaut-about {
+    color: #00E69B;
+    width: 40%;
+    font-size: 20em;
+}
+
+.article-about {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Chakra Petch', sans-serif;
+    color: #999998;
+    font-size: 1em;
+    justify-content: space-evenly;
+}

@@ -1,3 +1,14 @@
 .question-section {
-    color: #FFF;
+    font-family: 'Chakra Petch', sans-serif;
+    color: #999998;
+    text-align: center;
+    margin-top: 2em;
+    margin-left: 1em;
+    margin-bottom: 5em;
+}
+
+.scientific-name,
+.common-name {
+    text-align: left;
+    font-size: 2em;
 }

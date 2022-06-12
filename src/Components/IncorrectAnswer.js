@@ -1,7 +1,9 @@
-import React from 'react'
+import React from 'react';
+import './/IncorrectAnswer.css';
+
 
 const IncorrectAnswer = () => {
-    var sadPath = [
+    const sadPath = [
         "Keep going!",
         "Not quite. Keep studying!",
         "Close!",
@@ -14,18 +16,18 @@ const IncorrectAnswer = () => {
         "Repetition will help, keep trying.",
         "You've got this!",
         "I believe in you. Keep studying!",
-        "Keep your chin up!",
+        "The fate of the planet rests in your hands.",
       ];
       
-      var randomSadItem = sadPath[Math.floor(Math.random()*sadPath.length)];
+      const randomSadItem = sadPath[Math.floor(Math.random()*sadPath.length)];
 
   return (
-    <div>
+    <section className="incorrect-answer-section">
         <h2>Incorrect</h2>
         <div>
             {randomSadItem}    
         </div>
-    </div>
+    </section>
   )
 }
 

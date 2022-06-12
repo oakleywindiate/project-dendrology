@@ -22,6 +22,7 @@ function App() {
   const [incrementCorrectAnswer, setIncrementCorrectAnswer] = useState(0)
   const [decrementAnswer, setDecrementAnswer] = useState(0)
   const [reviewQuestions, setReviewQuestions] = useState([])
+  const [showAnswer, setShowAnswer] = useState('')
   const [error, setError] = useState('')
 
   const getQuestions = async () => {
@@ -34,7 +35,7 @@ function App() {
       setQuestions(loadQuestions)
       setRandomQuestions(loadQuestions.sort(() => Math.random() - .5))
     } catch (error) {
-      setError(error.message)
+      setError("Uh oh!")
     }
   }
 
@@ -47,11 +48,13 @@ function App() {
       setButton(true)
       setCorrectAnswer(true)
       setIncrementCorrectAnswer(incrementCorrectAnswer + 1)
+      setShowAnswer(questions[position].scientific_name)
     } else {
       setButton(true)
       setIncorrectAnswer(true)
       setDecrementAnswer(decrementAnswer + 1)
       setReviewQuestions((reviewQuestions) => ([ ...reviewQuestions, randomizeQuesitons[position]]))
+      setShowAnswer(questions[position].scientific_name)
     }
   }
 
@@ -60,6 +63,7 @@ function App() {
     setButton(false)
     setCorrectAnswer(false)
     setIncorrectAnswer(false)
+    setShowAnswer('')
   }
 
   return (
@@ -79,15 +83,18 @@ function App() {
           />
           } />
         <Route exact path='/test' render={() => 
-          <section>
+          <section className="question-wrapper">
             <QuestionContainer 
               questions={randomizeQuesitons}               
               position={position} 
+              showAnswer={showAnswer}
             />
-            <Form 
-              submitValue={checkAnswer} 
-            />
-            <button disabled={disableButton ? false : true} onClick={nextQuestion}>Next</button>
+            <div className="test-buttons">
+              <Form 
+                submitValue={checkAnswer} 
+              />
+              <button className="next-button" disabled={disableButton ? false : true} onClick={nextQuestion}>NEXT</button>
+            </div>
             {correctAnswer ? <Route exact path='/test' render={() =>               
               <CorrectAnswer /> } /> : ''}  
             {incorrectAnswer ? <Route exact path='/test' render={() => 

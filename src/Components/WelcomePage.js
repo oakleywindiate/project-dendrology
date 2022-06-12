@@ -1,6 +1,9 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserAstronaut } from "@fortawesome/free-solid-svg-icons";
+import { faDumbbell } from "@fortawesome/free-solid-svg-icons";
+import { faBrain } from "@fortawesome/free-solid-svg-icons";
+import { faAnglesUp } from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-router-dom';
 import './/WelcomePage.css'
 
@@ -9,7 +12,7 @@ const WelcomePage = () => {
     <section className="welcome-wrapper">
       <section className="welcome-section">
         <div className="welcome-page-text">
-          <h2 className="welcome-page-h2">The New Way to Study</h2>
+          <h2 className="welcome-page-h2">The NREM Study Guide</h2>
           <h3 className="welcome-page-h3">Intuitive and efficient studying platform</h3>
           <div className="welcome-page-buttons">
             <Link to="/test">
@@ -26,16 +29,19 @@ const WelcomePage = () => {
       </section>
       <section className="display-section">
         <div className="display one">
-          <h4>TRAIN</h4>
-          <h5>Work your mind daily</h5>
+          <FontAwesomeIcon className="display-icon" icon={faDumbbell} />
+          <h4 className="display-header">Train</h4>
+          <h5 className="display-text">Work your mind daily</h5>
         </div>
         <div className="display two">
-          <h4>LEARN</h4>
-          <h5>Review your weak spots</h5>
+          <FontAwesomeIcon className="display-icon" icon={faBrain} />
+          <h4 className="display-header">Learn</h4>
+          <h5 className="display-text">Review your weak spots</h5>
         </div>
         <div className="display three">
-          <h4>GAIN</h4>
-          <h5>Feel confident in your knowledge</h5>
+          <FontAwesomeIcon className="display-icon" icon={faAnglesUp} />
+          <h4 className="display-header">Gain</h4>
+          <h5 className="display-text">Feel confident in your knowledge</h5>
         </div>
       </section>
     </section>  

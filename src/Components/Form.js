@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './/Form.css';
 
 const Form = ({ submitValue, newFunction }) => {
     const [value, setValue] = useState('')
@@ -21,12 +22,12 @@ const Form = ({ submitValue, newFunction }) => {
 
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="form" onSubmit={handleSubmit}>
             <label>
                 Enter scientific name:
-                <input id="input-box" type="text" value={value} onChange={event => setValue(event.target.value)} />
+                <input placeholder="Enter scientific name..." id="input-box" type="text" value={value} onChange={event => setValue(event.target.value)} />
             </label>
-           {disabledSubmit ? <input type="submit" value="Submit" /> : <input disabled={true} type="submit" value="Submit" />}
+           {disabledSubmit ? <input id="submit-button" type="submit" value="Submit" /> : <input id="submit-button" disabled={true} type="submit" value="Submit" />}
         </form>
     )
 }

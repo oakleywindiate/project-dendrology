@@ -1,11 +1,10 @@
 .welcome-wrapper {
-   margin: 4em;
+   margin: 6em;
 }
 
 .welcome-section {
    display: flex;
    height: 100vh;
-   align-items: center;
 }
 
 .welcome-page-h2,
@@ -14,24 +13,35 @@
 }
 
 .welcome-page-h2 {
+   margin: 0;
+   padding: 0;
    font-family: 'DM Sans', sans-serif;
+   font-size: 5em;
 }
 
 .welcome-page-h3 {
    font-family: 'Chakra Petch', sans-serif;
+   margin-top: 1.5em;
+   color: #999998;
+   font-size: 1.5em;
 }
 
-.welcome-page-h3,
 .display-section {
    color: white;
 }
 
-.welcome-page-text,
-.welcome-page-user {
-   width: 50%;
+.welcome-page-text {
+   text-align: left;
+}
+
+.welcome-page-text {
+   margin-top: 7em;
+   width: 40%;
 }
 
 .welcome-page-user {
+   margin-top: 1.5em;
+   width: 60%;
    flex: 1;
 }
 
@@ -47,4 +57,50 @@
    background: linear-gradient(180deg, hsla(151, 42%, 26%, .4) 0%, hsla(0, 0%, 0%, .2) 100%);
    margin: .3em;
    box-shadow: 0px -2px 0px 0px rgba(0,230,155,0.65);
+}
+
+.welcome-page-buttons {
+   text-align: left;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+}
+
+.enter-app-welcome-page,
+.about-us-welcome-page {
+   margin-top: 3em;
+   border: none;
+   width: 10.5em;
+   padding: .8em;
+   font-size: 1.2em;
+   background: #00E69B;
+   clip-path: polygon(0px 0px, 100% 0px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0px 100%, 0px calc(100% - 1px));
+}
+
+.about-us-welcome-page {
+   margin-left: 1em;
+}
+
+.welcome-astronaut {
+   font-size: 35em;
+}
+
+.display-icon,
+.display-header {
+   color: #00E69B;
+}
+
+.display-icon {
+   padding-top: 1em;
+   font-size: 4em;
+}
+
+.display-header {
+   font-size: 2em;
+}
+
+.display-text {
+   font-size: 1.3em;
+   font-family: 'Chakra Petch', sans-serif;
+   color: #999998;
 }
