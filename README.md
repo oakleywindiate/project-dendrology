@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Project+Dendrology
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+![Homepage](<img width="1440" alt="Screen Shot 2022-06-12 at 8 52 05 PM" src="https://user-images.githubusercontent.com/93341234/173271042-0f87295d-99d1-4de1-95a4-a7c575416453.png">)
 
-In the project directory, you can run:
+Prepare for a study session that's out of this world-- the Dendrology+Project was created to arm ecologists and natural scientists with a modern day study tool that offers easy and on-the-go learning. Project+Dendrology allows professional to challenge their binomial nomenclature and stay sharp by creating a quick and easy to use platform that can be accessed in the field or on the couch. 
 
-### `npm start`
+## Project Motivation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The final solo project teaches developers how to create interactive and functional web pages using React, Router and Cypress.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### Technologies Used
+* React
+* Cypress
+* Router
+* HTML
+* CSS
 
-### `npm test`
+### Notice
+* This project requires a local API to view the repo. We recommend you use this [deployed link]() to view the project instead. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### To view this app, follow these steps in your terminal
+1. Clone down the project by running: `git clone git@github.com:oakleywindiate/project-dendrology.git`
+2. `cd` into dendrology-project
+3. Run `npm i`
+4. Run `npm start` in the terminal and on your local server
+6. To view your webpage, use the local host address provided
+7. To stop the local server from running in your terminal use `command` + `c`
+8. Open a seperate terminal
+9. Clone the API by running: `git clone git@github.com:oakleywindiate/project-dendrology-API.git`
+10. `cd` into dendrology-project-api
+11. Run `npm i`
+12. Run `npm start`
 
-### `npm run build`
+### Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Interactive testing suite
+* Review all missed questions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Development Team
 
-### `npm run eject`
+* [Oakley Windiate](https://github.com/oakleywindiate)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Credits
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This project was created while attending Turing School of Software and Design, a Colorado Non-Profit Organization.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Interested in learning more about Turing? [click here](https://turing.edu/)
