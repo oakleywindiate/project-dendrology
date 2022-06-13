@@ -2,7 +2,8 @@
 
 ## Overview
 
-![Homepage](<img width="1440" alt="Screen Shot 2022-06-12 at 8 52 05 PM" src="https://user-images.githubusercontent.com/93341234/173271042-0f87295d-99d1-4de1-95a4-a7c575416453.png">)
+<img width="1439" alt="Screen Shot 2022-06-12 at 9 03 06 PM" src="https://user-images.githubusercontent.com/93341234/173272088-b158d2a5-2d45-4413-a214-df3d605563c4.png">
+
 
 Prepare for a study session that's out of this world-- the Dendrology+Project was created to arm ecologists and natural scientists with a modern day study tool that offers easy and on-the-go learning. Project+Dendrology allows professional to challenge their binomial nomenclature and stay sharp by creating a quick and easy to use platform that can be accessed in the field or on the couch. 
 
