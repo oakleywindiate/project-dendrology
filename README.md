@@ -36,6 +36,8 @@ The final solo project teaches developers how to create interactive and function
 
 ### Features
 
+<img width="1439" alt="Screen Shot 2022-06-12 at 9 05 46 PM" src="https://user-images.githubusercontent.com/93341234/173272300-78fd66f1-589b-4af6-b0b5-46664bd58592.png">
+
 * Interactive testing suite
 * Review all missed questions
 
