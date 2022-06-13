@@ -33,3 +33,159 @@
 .styling-points {
   position: absolute;
 }
+
+@media screen and (max-width: 40em) {
+  .nav-link,
+  .enter-app-link
+   {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .icon-section {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 75em) {
+  .welcome-astronaut {
+    font-size: 25em;
+    width: 50%;
+  }
+
+  .welcome-page-h2 {
+    font-size: 4em;
+  }
+
+  .welcome-page-text {
+    width: 60%;
+  }
+
+  .welcome-wrapper {
+    margin-top: 1em;
+    margin-left: 4em;
+    margin-right: 4em;
+  }
+
+  .welcome-page-h3 {
+    font-size: 1.2em;
+  }
+
+  .display-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .welcome-section { 
+    height: 70vh;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .menu-button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 50em) {
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #input-box  {
+    margin-bottom: 1em;
+  }
+
+  #nextButton {
+    font-size: 13px;
+  }
+
+  .article-about {
+    font-size: 1em;
+    margin-left: 2em;
+  }
+
+  .welcome-astronaut-about {
+    font-size: 8em;
+    width: 20%;
+  }
+
+  .welcome-astronaut {
+    font-size: 20em;
+    width: 30%;
+  }
+
+  .welcome-page-h2 {
+    font-size: 3em;
+  }
+
+  .welcome-page-text {
+    width: 60%;
+  }
+
+  .welcome-page-h3 {
+    font-size: 1em;
+  }
+
+  .welcome-page-buttons {
+    font-size: .7em;
+  }
+
+  .welcome-wrapper {
+    margin-top: 1em;
+    margin-left: 4em;
+    margin-right: 4em;
+  }
+
+  .display-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .welcome-section { 
+    height: 60vh;
+  }
+}
+
+@media screen and (max-width: 35em) {
+  .welcome-astronaut {
+    font-size: 20em;
+    width: 30%;
+  }
+
+  .welcome-page-h2 {
+    font-size: 1.5em;
+  }
+
+  .welcome-page-text {
+    width: 40%;
+  }
+
+  .welcome-page-h3 {
+    font-size: .8em;
+  }
+
+  .welcome-page-buttons {
+    display: flex;
+  }
+
+  .welcome-wrapper {
+    margin-top: 1em;
+    margin-left: 4em;
+    margin-right: 4em;
+  }
+
+  .display-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .welcome-section { 
+    height: 50vh;
+  }
+}

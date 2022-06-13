@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './/Question.css'
 
 const Question = ({ question, showAnswer }) => {
@@ -15,3 +16,11 @@ const Question = ({ question, showAnswer }) => {
 };
 
 export default Question;
+
+Question.propTypes = {
+  question: PropTypes.object.isRequired
+};
+
+Question.defaultProps = {
+  showAnswer: 'string'
+};

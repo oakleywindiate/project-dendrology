@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReviewQuestions from './ReviewQuestions';
 
 const ReviewQuestionsContainer = ({ reviewQuestions }) => {
@@ -29,3 +30,7 @@ return (
 }
 
 export default ReviewQuestionsContainer;
+
+ReviewQuestionsContainer.propTypes = {
+  reviewQuestions: PropTypes.array.isRequired,
+};

@@ -1,5 +1,6 @@
 import React from 'react';
 import Question from './Question';
+import PropTypes from 'prop-types';
 import './/QuestionContainer.css';
 
 const QuestionContainer = ({ questions, position, showAnswer }) => {
@@ -19,3 +20,10 @@ const error =
 }
 
 export default QuestionContainer;
+
+QuestionContainer.propTypes = {
+  questions: PropTypes.array.isRequired,
+  position: PropTypes.number.isRequired,
+  showAnswer: PropTypes.string.isRequired,
+};
+

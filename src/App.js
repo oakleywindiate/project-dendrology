@@ -114,7 +114,6 @@ function App() {
         <Route exact path='/review' render={() =>           
           <ReviewQuestionsContainer 
             reviewQuestions={reviewQuestions} 
-            position={position}
           />
         } />  
         <Route exact path='/about' render={() =>           
