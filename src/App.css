@@ -24,3 +24,12 @@
   background: #00E69B;
   clip-path: polygon(0px 0px, 100% 0px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0px 100%, 0px calc(100% - 1px));
 }
+
+.styling-points-correct {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.styling-points {
+  position: absolute;
+}

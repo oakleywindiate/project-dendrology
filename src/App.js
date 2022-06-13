@@ -35,7 +35,7 @@ function App() {
       setQuestions(loadQuestions)
       setRandomQuestions(loadQuestions.sort(() => Math.random() - .5))
     } catch (error) {
-      setError("Uh oh!")
+      setError("An error has occurred with our testing AI. Please try again.")
     }
   }
 
@@ -93,16 +93,22 @@ function App() {
               <Form 
                 submitValue={checkAnswer} 
               />
-              <button className="next-button" disabled={disableButton ? false : true} onClick={nextQuestion}>NEXT</button>
+              <button id="nextButton" className="next-button" disabled={disableButton ? false : true} onClick={nextQuestion}>NEXT</button>
             </div>
-            {correctAnswer ? <Route exact path='/test' render={() =>               
-              <CorrectAnswer /> } /> : ''}  
-            {incorrectAnswer ? <Route exact path='/test' render={() => 
-              <IncorrectAnswer /> } /> : ''}
-            <Points 
-              incrementCorrectAnswer={incrementCorrectAnswer} 
-              decrementAnswer={decrementAnswer}
-            />
+            <div className="styling-points-correct">
+              <div className="styling-correct-incorrect">
+                {correctAnswer ? <Route exact path='/test' render={() =>               
+                  <CorrectAnswer /> } /> : ''}  
+                {incorrectAnswer ? <Route exact path='/test' render={() => 
+                  <IncorrectAnswer /> } /> : ''}
+              </div>
+              <div className="styling-points">
+                <Points 
+                  incrementCorrectAnswer={incrementCorrectAnswer} 
+                  decrementAnswer={decrementAnswer}
+                />
+              </div>
+            </div>
           </section>   
           } /> 
         <Route exact path='/review' render={() =>           

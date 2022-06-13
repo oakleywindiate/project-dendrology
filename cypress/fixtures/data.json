@@ -3,16 +3,6 @@
     "id": 1,
     "common_name": "sawtooth oak",
     "scientific_name": "Quercus acutissima"
-  },
-  {
-    "id": 2,
-    "common_name": "pin oak",
-    "scientific_name": "Quercus palustris"
-  },
-  {
-    "id": 3,
-    "common_name": "bur oak",
-    "scientific_name": "Quercus macrocarpa"
   }
 ]
 

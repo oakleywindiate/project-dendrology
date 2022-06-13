@@ -28,8 +28,16 @@ describe('About page', () => {
       cy.get('button.enter-app-link').click().url().should('eq', 'http://localhost:3000/test')
     })
 
-    // it('Should display "About" section information', () => {
-    //     cy.get('section.about-section').children().contains('about-section-content')
-    //   })
+    it('Should display "About" page astronaut', () => {
+      cy.get('.welcome-astronaut-about').should('be.visible')
+    })
+
+    it('Should display "About" section teaser', () => {
+        cy.get('div.article-about').children().contains(`Hello, Explorer, and welcome to the Dendrology Project. I am an AI that was created by a group of scientists working to preserve the planet called Earth. My purpose is to prepare you for your mission to study this planet and the many species of flora that populate it's surface-- if you choose to accept it. This is no easy task, as the planet has been ravaged by industry, yet the burden of knowledge weighs upon us to act. The conservation of the planet is our priority. So, I ask you, will you join us?`)
+      })
+
+    it('Should display "About" section instructions for use', () => {
+        cy.get('div.article-about').children().contains(`To start testing, select "ENTER APP" located on the right upper quadrant of your screen device. You will be prompted to complete a series of dendrological questions pertaining to this planet. You can review your incorrect questions at any time by selecting the "REVIEW" tab located in the navigation bar above.`)
+      })
   
   })

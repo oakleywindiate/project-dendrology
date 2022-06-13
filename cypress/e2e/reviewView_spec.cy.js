@@ -28,7 +28,10 @@ describe('Review page', () => {
     it('Should display a button in the header to begin testing', () => {
       cy.get('button.enter-app-link').click().url().should('eq', 'http://localhost:3000/test')
     })
-  
+
+    it('Should display text if there are no questions to display', () => {
+      cy.get('div.review-section-error').should('have.text', `It's kinda empty in here...`)
+    })
   
   })
   

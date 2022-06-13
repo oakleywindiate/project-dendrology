@@ -6,7 +6,7 @@ const QuestionContainer = ({ questions, position, showAnswer }) => {
 
 const error = 
   <div className="error-section">
-    "An error has occurred"
+    <h3 className="error-message">An error has occurred with our testing AI. Please try again.</h3>
   </div>
 
   

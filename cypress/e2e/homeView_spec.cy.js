@@ -30,11 +30,11 @@ describe('Home page', () => {
   })
 
   it('Should display welcome page text h2', () => {
-    cy.get('h2.welcome-page-h2').contains('The New Way to Study')
+    cy.get('h2.welcome-page-h2').contains('The NREM Study Guide')
   })
 
   it('Should display welcome page text h3', () => {
-    cy.get('h3.welcome-page-h3').contains('Intuitive and efficient productivity platform')
+    cy.get('h3.welcome-page-h3').contains('Intuitive and efficient studying platform')
   })
 
   it('Should display welcome page image', () => {

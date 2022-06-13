@@ -1,13 +1,14 @@
 import React from 'react';
+import './/Points.css';
 
 const Points = ({ incrementCorrectAnswer, decrementAnswer }) => {
   return (
-    <section>
+    <section className="points-section">
       <div>
-        {incrementCorrectAnswer}
+        <h5 className="correct">{`Correct: ${incrementCorrectAnswer}`}</h5>
       </div>
       <div>
-        {decrementAnswer}
+      <h5 className="incorrect">{`Incorrect: ${decrementAnswer}`}</h5>
       </div>
     </section>
   )
