@@ -19,7 +19,7 @@ The final solo project teaches developers how to create interactive and function
 * CSS
 
 ### Notice
-* This project requires a local API to view the repo. We recommend you use this [deployed link]() to view the project instead. 
+* This project requires a local API to view the repo. We recommend you use this [deployed link](https://dendrology-project.herokuapp.com/home) to view the project instead. 
 
 ### To view this app, follow these steps in your terminal
 1. Clone down the project by running: `git clone git@github.com:oakleywindiate/project-dendrology.git`
