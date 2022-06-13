@@ -1,7 +1,9 @@
-import React from 'react'
+import React from 'react';
+import './/CorrectAnswer.css';
+
 
 const CorrectAnswer = () => {
-    var happyPath = [
+    const happyPath = [
         "Nice!",
         "Nice job!",
         "Wow",
@@ -17,15 +19,15 @@ const CorrectAnswer = () => {
         "Technology will replace you soon, but good work for now",
       ];
       
-      var randomHappyItem = happyPath[Math.floor(Math.random()*happyPath.length)];
+      const randomHappyItem = happyPath[Math.floor(Math.random()*happyPath.length)];
 
   return (
-    <div>
-    <h2>Correct</h2>
-    <div>
-        {randomHappyItem}    
-    </div>
-</div>
+    <section className="correct-answer-section">
+      <h2>Correct</h2>
+      <div>
+          {randomHappyItem}    
+      </div>
+    </section>
   )
 }
 

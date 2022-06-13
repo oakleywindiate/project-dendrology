@@ -1,0 +1,37 @@
+.review-section-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-top: 8em;
+    margin-right: 4em;
+}
+
+.review-questions {
+    width: 100%;
+    margin: 4em;
+    background: linear-gradient(180deg, hsla(151, 42%, 26%, .4) 0%, hsla(0, 0%, 0%, .2) 100%);
+    box-shadow: 0px -2px 0px 0px rgba(0,230,155,0.65);
+}
+
+.review-common-name-title,
+.review-scientific-name-title {
+    margin-top: 2em;
+    font-family: 'DM Sans', sans-serif;
+    color: #00E69B;
+}
+
+.review-common-name-name,
+.review-scientific-name-name,
+.review-section-error {
+    font-family: 'Chakra Petch', sans-serif;
+    color: #999998;
+}
+
+.faTree {
+    color: #00E69B;
+    padding-top: 1em;
+    font-size: 4em; 
+}

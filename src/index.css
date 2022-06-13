@@ -10,6 +10,9 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'DM Sans', sans-serif;
+  font-family: 'Krona One', sans-serif;  
 }
 
 html {
@@ -17,4 +20,25 @@ html {
   margin: 0;
   line-height: inherit;
   box-sizing: border-box;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+button,
+#submit-button {
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+button:hover, 
+#submit-button {
+  transform: scale(1.1);
+  background-color: #FFF;
+}
+
+button:disabled {
+  background-color: #999998;
+  transform: scale(1);
 }

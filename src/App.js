@@ -8,8 +8,9 @@ import Points from './Components/Points';
 import WelcomePage from './Components/WelcomePage';
 import NavBar from './Components/NavBar';
 import About from './Components/About';
-import './App.css';
+import Header from './Components/Header';
 import ReviewQuestionsContainer from './Components/ReviewQuestionsContainer';
+import './App.css';
 
 function App() {
   const [questions, setQuestions] = useState([])
@@ -21,6 +22,7 @@ function App() {
   const [incrementCorrectAnswer, setIncrementCorrectAnswer] = useState(0)
   const [decrementAnswer, setDecrementAnswer] = useState(0)
   const [reviewQuestions, setReviewQuestions] = useState([])
+  const [showAnswer, setShowAnswer] = useState('')
   const [error, setError] = useState('')
 
   const getQuestions = async () => {
@@ -33,7 +35,7 @@ function App() {
       setQuestions(loadQuestions)
       setRandomQuestions(loadQuestions.sort(() => Math.random() - .5))
     } catch (error) {
-      setError(error.message)
+      setError("An error has occurred with our testing AI. Please try again.")
     }
   }
 
@@ -46,11 +48,13 @@ function App() {
       setButton(true)
       setCorrectAnswer(true)
       setIncrementCorrectAnswer(incrementCorrectAnswer + 1)
+      setShowAnswer(questions[position].scientific_name)
     } else {
       setButton(true)
       setIncorrectAnswer(true)
       setDecrementAnswer(decrementAnswer + 1)
       setReviewQuestions((reviewQuestions) => ([ ...reviewQuestions, randomizeQuesitons[position]]))
+      setShowAnswer(questions[position].scientific_name)
     }
   }
 
@@ -59,12 +63,13 @@ function App() {
     setButton(false)
     setCorrectAnswer(false)
     setIncorrectAnswer(false)
+    setShowAnswer('')
   }
 
   return (
     <div className="App">
       <header className="App-header">
-        <h1>PROJECT+DENDROLOGY</h1>
+        <Header />
         <NavBar />
         <Link to="/test"> 
           <button className="enter-app-link">ENTER APP</button>
@@ -78,23 +83,32 @@ function App() {
           />
           } />
         <Route exact path='/test' render={() => 
-          <section>
+          <section className="question-wrapper">
             <QuestionContainer 
               questions={randomizeQuesitons}               
               position={position} 
+              showAnswer={showAnswer}
             />
-            <Form 
-              submitValue={checkAnswer} 
-            />
-            <button disabled={disableButton ? false : true} onClick={nextQuestion}>Next</button>
-            {correctAnswer ? <Route exact path='/test' render={() =>               
-              <CorrectAnswer /> } /> : ''}  
-            {incorrectAnswer ? <Route exact path='/test' render={() => 
-              <IncorrectAnswer /> } /> : ''}
-            <Points 
-              incrementCorrectAnswer={incrementCorrectAnswer} 
-              decrementAnswer={decrementAnswer}
-            />
+            <div className="test-buttons">
+              <Form 
+                submitValue={checkAnswer} 
+              />
+              <button id="nextButton" className="next-button" disabled={disableButton ? false : true} onClick={nextQuestion}>NEXT</button>
+            </div>
+            <div className="styling-points-correct">
+              <div className="styling-correct-incorrect">
+                {correctAnswer ? <Route exact path='/test' render={() =>               
+                  <CorrectAnswer /> } /> : ''}  
+                {incorrectAnswer ? <Route exact path='/test' render={() => 
+                  <IncorrectAnswer /> } /> : ''}
+              </div>
+              <div className="styling-points">
+                <Points 
+                  incrementCorrectAnswer={incrementCorrectAnswer} 
+                  decrementAnswer={decrementAnswer}
+                />
+              </div>
+            </div>
           </section>   
           } /> 
         <Route exact path='/review' render={() =>           

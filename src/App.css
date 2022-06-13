@@ -5,11 +5,31 @@
 .App-header {
   background-color: #282c34;
   display: flex;
-  -ms-flex-item-align: auto;
   align-items: center;
   justify-content: space-between;
   color: #FFF;
   background-color: #000;
-  -webkit-box-shadow: 0px 2px 0px -1px rgba(218,220,223,0.14); 
-  box-shadow: 0px 2px 0px -1px rgba(218,220,223,0.14);
+  box-shadow: 0px 2px 0px -1px rgba(218, 220, 223, 0.14);
+  margin-top: .5em;
+}
+
+.enter-app-link,
+.next-button { 
+  border: none;
+  color: #000;
+  width: 8.5em;
+  margin: 1em;
+  padding: .8em;
+  font-size: 14px;
+  background: #00E69B;
+  clip-path: polygon(0px 0px, 100% 0px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0px 100%, 0px calc(100% - 1px));
+}
+
+.styling-points-correct {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.styling-points {
+  position: absolute;
 }
