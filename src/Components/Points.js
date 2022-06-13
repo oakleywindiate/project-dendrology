@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './/Points.css';
 
 const Points = ({ incrementCorrectAnswer, decrementAnswer }) => {
@@ -15,3 +16,8 @@ const Points = ({ incrementCorrectAnswer, decrementAnswer }) => {
 }
 
 export default Points;
+
+Points.propTypes = {
+  incrementCorrectAnswer: PropTypes.number.isRequired,
+  decrementAnswer: PropTypes.number.isRequired,
+};
