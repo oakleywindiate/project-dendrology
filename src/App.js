@@ -26,7 +26,7 @@ function App() {
   const [error, setError] = useState('')
 
   const getQuestions = async () => {
-    const url = 'http://localhost:3001/test'
+    const url = 'https://dendrology-project-api.herokuapp.com/test'
     setError('')
 
     try {
