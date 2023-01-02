@@ -1,5 +1,5 @@
 import React from 'react';
-import './/CorrectAnswer.css';
+import './CorrectAnswer.css';
 
 
 const CorrectAnswer = () => {

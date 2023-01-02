@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTree } from "@fortawesome/free-solid-svg-icons";
-import './/ReviewQuestions.css';
+import './ReviewQuestions.css';
 
 const ReviewQuestions = ({ common_name, scientific_name, id }) => {
 

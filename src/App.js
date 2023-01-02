@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import QuestionContainer from './Components/QuestionContainer';
-import Form from './Components/Form';
-import CorrectAnswer from './Components/CorrectAnswer';
-import IncorrectAnswer from './Components/IncorrectAnswer';
+import QuestionContainer from './components/QuestionContainer';
+import Form from './components/Form';
+import CorrectAnswer from './components/CorrectAnswer';
+import IncorrectAnswer from './components/IncorrectAnswer';
 import { Route, Link } from 'react-router-dom';
-import Points from './Components/Points'; 
-import WelcomePage from './Components/WelcomePage';
-import NavBar from './Components/NavBar';
-import About from './Components/About';
-import Header from './Components/Header';
-import ReviewQuestionsContainer from './Components/ReviewQuestionsContainer';
+import Points from './components/Points'; 
+import WelcomePage from './components/WelcomePage';
+import NavBar from './components/NavBar';
+import About from './components/About';
+import Header from './components/Header';
+import ReviewQuestionsContainer from './components/ReviewQuestionsContainer';
 import './App.css';
 
 function App() {
@@ -98,9 +98,9 @@ function App() {
             <div className="styling-points-correct">
               <div className="styling-correct-incorrect">
                 {correctAnswer ? <Route exact path='/test' render={() =>               
-                  <CorrectAnswer /> } /> : ''}  
+                  <CorrectAnswer /> } /> : null}  
                 {incorrectAnswer ? <Route exact path='/test' render={() => 
-                  <IncorrectAnswer /> } /> : ''}
+                  <IncorrectAnswer /> } /> : null}
               </div>
               <div className="styling-points">
                 <Points 

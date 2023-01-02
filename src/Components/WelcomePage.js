@@ -5,7 +5,7 @@ import { faDumbbell } from "@fortawesome/free-solid-svg-icons";
 import { faBrain } from "@fortawesome/free-solid-svg-icons";
 import { faAnglesUp } from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-router-dom';
-import './/WelcomePage.css'
+import './WelcomePage.css'
 
 const WelcomePage = () => {
   return (
