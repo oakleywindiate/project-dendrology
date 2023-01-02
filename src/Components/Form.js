@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import './/Form.css';
+import './Form.css';
 
-const Form = ({ submitValue, newFunction }) => {
+const Form = ({ submitValue }) => {
     const [value, setValue] = useState('')
     const [disabledSubmit, setDisabledSubmit] = useState(false)
 

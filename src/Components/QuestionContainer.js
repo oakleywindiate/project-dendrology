@@ -1,7 +1,7 @@
 import React from 'react';
 import Question from './Question';
 import PropTypes from 'prop-types';
-import './/QuestionContainer.css';
+import './QuestionContainer.css';
 
 const QuestionContainer = ({ questions, position, showAnswer }) => {
 

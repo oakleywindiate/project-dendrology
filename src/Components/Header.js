@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import NavBar from './NavBar';
-import './/Header.css'
+import './Header.css'
 
 const Header = () => {
   return (

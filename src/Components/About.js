@@ -4,7 +4,7 @@ import { faUserAstronaut } from "@fortawesome/free-solid-svg-icons";
 import { faDumbbell } from "@fortawesome/free-solid-svg-icons";
 import { faBrain } from "@fortawesome/free-solid-svg-icons";
 import { faAnglesUp } from "@fortawesome/free-solid-svg-icons";
-import './/About.css';
+import './About.css';
 
 const About = () => {
   return (
