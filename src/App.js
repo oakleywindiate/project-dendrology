@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import QuestionContainer from './components/Questioncontainer';
+import QuestionContainer from './components/QuestionContainer';
 import Form from './components/Form';
 import CorrectAnswer from './components/CorrectAnswer';
 import IncorrectAnswer from './components/IncorrectAnswer';
@@ -26,7 +26,7 @@ function App() {
   const [error, setError] = useState('')
 
   const getQuestions = async () => {
-    const url = 'https://dendrology-project-api.herokuapp.com/test'
+    const url = 'https://project-dendrology-api.netlify.app/.netlify/functions/api/test'
     setError('')
 
     try {
